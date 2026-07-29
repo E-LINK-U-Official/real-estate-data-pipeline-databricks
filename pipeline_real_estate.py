@@ -1,3 +1,6 @@
+# 💻 Código Fuente (PySpark)
+
+```python
 from pyspark.sql import functions as F
 
 # 1. Leer la tabla original
@@ -15,7 +18,7 @@ df_procesado = df_limpio.withColumn(
      .otherwise(F.col("Renta_Original"))
 )
 
-# 4. Mostrar los datos corregidos
+# 4. Persistir los datos transformados en una tabla Delta optimizada
 display(df_procesado)
 # Guardar la tabla sin errores de caracteres invalidos
 df_procesado.write.mode("overwrite").format("delta").saveAsTable("workspace.default.rentas_limpias_realestate")
