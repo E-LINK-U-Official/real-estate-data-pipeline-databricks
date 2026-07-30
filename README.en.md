@@ -1,3 +1,5 @@
+[🇩🇴 Leer en Español](./README.md)
+
 # Real Estate Data Pipeline with PySpark & Databricks (Serverless)
 
 ## 📝 Project Overview
